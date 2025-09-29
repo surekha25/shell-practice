@@ -9,6 +9,6 @@ purple="\e[35m"
 cyan="\e[36m"
 white="\e[37m" #"\e[0m"
 
-echo -e "$cyan Hello World $N"
+echo -e "$purple Hello World $N"
 echo "This is Hyderabad"
 echo "check this line of color"
