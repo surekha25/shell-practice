@@ -10,7 +10,7 @@ if [ $userid -ne 0 ]; then
 fi
 
 validate(){
-    if [ $1 -ne 0]; then
+    if [ $1 -ne 0 ]; then
         echo "Error: Installing $2 is Failed"
         exit 1
     else 
