@@ -1,0 +1,17 @@
+#!/bin/bash
+
+userid=$(id -u)
+
+if [ $userid -ne 0 ]; then
+    echo "Please run this script with root privilege"
+    exit 1
+fi
+
+dnf install mysql -q
+
+if [ $? -ne 0 ]; then
+    echo "Installing Mysql is Failed"
+    exit 1
+else 
+    echo "Installing Mysql is Success"
+fi
