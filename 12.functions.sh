@@ -18,12 +18,12 @@ validate(){
     fi
 }
 
-dnf install mysql -q
+dnf install mysql -y
 validate $? "MySQL"  #passing args 'exit status' and 'MySQL'
 
-dnf install nginx -q
+dnf install nginx -y
 validate $? "Nginx"
 
-dnf install python3 -q
+dnf install python3 -y
 validate $? "Python 3"
 
