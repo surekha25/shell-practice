@@ -17,7 +17,7 @@ script_name=$( echo $0 | cut -d "." -f1 )
 Log_file="$Log_Folder/$script_name.log"
 
 mkdir -p $Log_Folder
-echo "Script Started Executer at: $(date)" | tee -a $Log_file
+echo "Script Started Executed at: $(date)" | tee -a $Log_file
 
 validate(){
     if [ $1 -ne 0 ] ; then
@@ -49,5 +49,5 @@ dnf list installed python3 &>>$Log_file
         dnf install python3 -y &>>$Log_file
         validate $? "Python 3"
     else
-        echo -e "Already Installed Pyhon 3 ... $Y Skipped $N" | tee -a $Log_file
+        echo -e "Already Installed Python 3 ... $Y Skipped $N" | tee -a $Log_file
     fi
