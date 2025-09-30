@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for package in $a
+for package in $@
 do
     echo "Package Name is: $package"
 done
