@@ -13,7 +13,7 @@ if [ $userid -ne 0 ]; then
 fi
 
 Log_Folder="/var/log/shell-script"
-script_name=$( echo $0 | cut -d "." -f )
+script_name=$( echo $0 | cut -d "." -f1 )
 Log_file="$Log_Folder/$script_name.log"
 
 mkdir -p $Log_Folder
@@ -44,10 +44,10 @@ dnf list installed nginx &>>$Log_file
         echo -e "Already Installed Nginx ... $Y Skipped $N" | tee -a $Log_file
     fi
 
-dnf list installed pyhon3 &>>$Log_file
+dnf list installed python3 &>>$Log_file
     if [  $? -ne 0 ]; then
         dnf install python3 -y &>>$Log_file
-        validate $? "Pyhon 3"
+        validate $? "Python 3"
     else
         echo -e "Already Installed Pyhon 3 ... $Y Skipped $N" | tee -a $Log_file
     fi
