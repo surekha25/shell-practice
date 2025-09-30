@@ -13,14 +13,14 @@ if [ $userid -ne 0 ]; then
 fi
 
 Log_Folder="/var/log/shell-script"
-script_name=$( echo $0 | cut -d "." -f)
+script_name=$( echo $0 | cut -d "." -f )
 Log_file="$Log_Folder/$script_name.log"
 
 mkdir -p $Log_Folder
 echo "Script Started Executer at: $(date)" | tee -a $Log_file
 
 validate(){
-    if [ $1 -ne 0] ; then
+    if [ $1 -ne 0 ] ; then
        echo -e "Installing $2 ... $R Failure $N" | tee -a $Log_file
        exit 1
     else
