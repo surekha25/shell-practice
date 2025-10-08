@@ -52,8 +52,10 @@ if [ ! -z "${files}" ]; then
     ### Start Archeiving ###
     echo "Found Files : $files"
     timestamp=$(date +%F-%H-%M)
-    zip_file_name="$dest_dir/app-logs/$timestamp.zip"
+    zip_file_name="$dest_dir/app-logs-$timestamp.zip"
     echo "Zip File Name is: $zip_file_name"
+
+    ### manually we can install zip command on server ###
     find $source_dir -name "*.log" -type f -mtime +$days | zip -@ -j "$zip_file_name"
 
     ### check files archieval success or not
