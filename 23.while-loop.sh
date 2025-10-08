@@ -2,13 +2,13 @@
 
 count=5
 
-echo "Starting Countdown ..."
+echo "Starting Countdown ...."
 
-while [ $count -gt 0 ]
+while [ $count -gt 0 ]; then
 do
-    echo "Time left: $count"
-    sleep 1 #pause for 1 second
-    count=$((count -1)) # Decrement the count
+    echo "Time Left: $count"
+    sleep 1
+    count=$(( count - 1 ))
 done
 
-echo "Times Up!"
+echo "Times Up...!"
