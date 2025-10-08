@@ -4,7 +4,7 @@ userid=$(id -u)
 
 source_dir=$1
 dest_dir=$2
-days=$(3:-14) 
+days=${3:-14} # if user $3 (arg no 3) not provided considered as 14 days
 
 R="\e[31m"
 G="\e[32m"
