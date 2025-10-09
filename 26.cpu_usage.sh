@@ -1,5 +1,5 @@
 #!/bin/bash
-cpu_threshold=80
+cpu_threshold=-5 # in project we keep it as 80
 ip_address=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 message=""
 
